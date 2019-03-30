@@ -119,9 +119,8 @@ p {
   }
   h2, p, .social-media a {
     display: block;
-    transform: translateY(-200px);
+    transform: translateY(-300px);
     transition: all 1.5s cubic-bezier(0, 0.14, 0, 0.92);
-    
   }
   h2 {
     @media(max-width: 768px) {
@@ -207,27 +206,32 @@ p {
     right: 0;
     bottom: 0;
     left: 0;
+    background-color: rgba(255, 255, 255, .9);
     background-image: inherit;
     background-position: -.65em 0;
   }
-  &:after {
-    content: "";
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    opacity: 1;
-    height: 100%;
-    width: 100%;
-    z-index: 10;
-    transition-delay: .3s;
-    background-color: #fff;
-    transition: all 1.8s ease;
-  }
-  &.active:after {
-    opacity: 0;
-    background-color: transparent;
+  h1.header {
+    position: relative;
+    background: inherit;
+    &:after {
+      content: "";
+      top: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      opacity: 1;
+      height: 100%;
+      width: 100%;
+      z-index: 10;
+      transition-delay: .3s;
+      background-color: #fff;
+      transition: all 1.3s ease;
+    }
+    &.active:after {
+      width: 0%;
+      left: initial;
+      right: 0;
+    }
   }
 }
 .right {
@@ -242,7 +246,7 @@ p {
   h3 {
     font-size: 1.8rem;
     margin: 0;
-    color: #222;
+    color: #283546;
     font-weight: 100;
   }
   &:after {
@@ -272,6 +276,7 @@ p {
   right: 0;
   bottom: 0;
   overflow: hidden;
+  z-index: -1;
 }
 .bubbles.active {
   width: 100%;
@@ -279,13 +284,15 @@ p {
   display: block;
   .circle {
     stroke: white;
-    fill: none;
+    filter: drop-shadow(0px 0px 1px 1px rgba(34,34,34, .8));
+    // box-shadow: 0px 0px 6px 2px rgba(0,0,0, 1);
+    fill: rgba(244,244,244, .3);
   }
   > g > g:nth-of-type(3n) .circle {
-    stroke: #87f5fb;
+    stroke: #fff;
   }
   > g > g:nth-of-type(4n) .circle {
-    stroke: #8be8cb;
+    stroke: #fff;
   }
 }
 .bubbles-large.active {
