@@ -111,6 +111,7 @@ p {
   flex-wrap: no-wrap;
   flex-direction: column;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   @media(max-width: 768px) {
     justify-content: flex-start;
   }
