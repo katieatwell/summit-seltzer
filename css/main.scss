@@ -109,7 +109,6 @@ p {
   flex-wrap: no-wrap;
   flex-direction: column;
   @media(max-width: 768px) {
-    overflow-y: scroll;
     justify-content: flex-start;
   }
   &.active {
