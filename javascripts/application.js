@@ -12,7 +12,7 @@ $(document).ready(function() {
   $('.bubbles-small').toggleClass('active');
   $('.bottom').addClass('active');
   setTimeout(showWords, 2000);
-  setTimeout(fadeIn, 1200)
+  setTimeout(fadeIn, 1800)
 })
 function fadeIn() {
   $('.header').addClass('active');
