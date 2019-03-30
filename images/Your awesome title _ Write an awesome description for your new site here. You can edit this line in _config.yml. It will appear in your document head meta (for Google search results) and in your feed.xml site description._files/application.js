@@ -11,21 +11,14 @@ $(document).ready(function() {
   $('.bubbles-large').toggleClass('active');
   $('.bubbles-small').toggleClass('active');
   $('.bottom').addClass('active');
-  setTimeout(showWords, 1400);
-  setTimeout(fadeIn, 1200)
+  setTimeout(showWords, 1000);
 })
-function fadeIn() {
-  $('.wrapper').addClass('active');
-}
 function showWords() {
   $('.right').addClass('active');
   $('.menu').addClass('active');
   $(".social-media a").addClass('active');
+  $('.wrapper').addClass('active');
 }
-$(document).on('click', '.hamburger', function() {
-  $(this).toggleClass('is-active');
+$(document).on('click', '.menu', function() {
   $('.sidebar').toggleClass('active');
-  if ($(window).width() < 600) {
-    $('html,body').css('overflow', 'scroll');
-  }
 })
