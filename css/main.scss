@@ -110,6 +110,7 @@ p {
   justify-content: center;
   flex-wrap: no-wrap;
   flex-direction: column;
+  overflow: scroll;
   @media(max-width: 768px) {
     justify-content: flex-start;
   }

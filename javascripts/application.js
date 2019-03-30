@@ -25,7 +25,7 @@ function showWords() {
 $(document).on('click', '.hamburger', function() {
   $(this).toggleClass('is-active');
   $('.sidebar').toggleClass('active');
-  if ($(window).width() < 600) {
-    $('html,body').toggleClass('overflow');
-  }
+  // if ($(window).width() < 600) {
+  //   $('html,body').toggleClass('overflow');
+  // }
 })
