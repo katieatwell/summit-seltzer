@@ -13,6 +13,7 @@ body {
   padding: 0;
   position: relative;
   overflow: hidden;
+  scroll-behavior: smooth;
   &.overflow {
     overflow-y: scroll;
   }
@@ -230,7 +231,8 @@ p {
     span {
       display: block;
       background: inherit;
-      font-weight: 700;
+      font-weight: 900;
+      text-transform: lowercase;
       line-height: .89;
       &:nth-of-type(4) {
         display: inline-block;
@@ -238,7 +240,7 @@ p {
       &:last-of-type {
         display: inline-block;
         float: right;
-        transform: translate(4px, 10vh);
+        transform: translate(4px, 12vh);
       }
     }
   }
