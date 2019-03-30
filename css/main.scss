@@ -11,13 +11,18 @@ html,
 body {
   margin: 0;
   padding: 0;
+  position: relative;
+  overflow: hidden;
+  &.overflow {
+    overflow-y: scroll;
+  }
 }
 
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 62.5%;
   line-height: 1.5;
-
+  overflow: hidden;
   @media (min-width: 38em) {
     font-size: 20px;
   }
@@ -26,7 +31,6 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  overflow: hidden;
 }
 h1 {
   font-family: 'Lekton', sans-serif;
@@ -186,7 +190,11 @@ p {
   overflow: hidden;
   z-index: 0;
   @media(max-width: 768px) {
-    background-position: left;
+    background-position: bottom right;
+  }
+  @media(max-width: 600px) {
+    justify-content: flex-start;
+    padding-left: 6vw;
   }
   h1 {
     font-size: 25vw;
@@ -210,7 +218,36 @@ p {
     background-image: inherit;
     background-position: -.65em 0;
   }
+  h1.mobile {
+    display: none;
+    font-size: 16rem;
+    margin-top: 22%;
+    @media(max-width: 768px) {
+      display: block;
+    }
+    @media(max-width: 400px) {
+      font-size: 12rem;
+    }
+    span {
+      display: block;
+      background: inherit;
+      &:nth-of-type(4) {
+        display: inline-block;
+      }
+      &:last-of-type {
+        display: inline-block;
+        float: right;
+        transform: translate(4px, 10vh);
+      }
+    }
+  }
   h1.header {
+    display: block;
+    @media(max-width: 768px) {
+      display: none;
+    }
+  }
+  h1.hero-font {
     position: relative;
     background: inherit;
     &:after {
@@ -243,6 +280,13 @@ p {
   transition-delay: 3s;
   transition: all .3s ease;
   background: inherit;
+  @media(max-width: 786px) {
+    left: 6vw;
+    right: initial;
+    top: 6vh;
+    bottom: initial;
+    transform: translate(0vw, 0vh);
+  }
   h3 {
     font-size: 1.8rem;
     margin: 0;
@@ -254,7 +298,7 @@ p {
     background-color: #fff;
     position: absolute;
     width: 100%;
-    height: 110px;
+    height: auto;
     left: 0;
     top: 0;
     bottom: -2px;

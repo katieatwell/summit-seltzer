@@ -8,14 +8,14 @@ function getLetters(phrase) {
   })
 }
 $(document).ready(function() {
-  $('.bubbles-large').toggleClass('active');
-  $('.bubbles-small').toggleClass('active');
   $('.bottom').addClass('active');
   setTimeout(showWords, 2000);
-  setTimeout(fadeIn, 1800)
+  setTimeout(fadeIn, 1800);
 })
 function fadeIn() {
-  $('.header').addClass('active');
+  $('.hero-font').addClass('active');
+  $('.bubbles-large').toggleClass('active');
+  $('.bubbles-small').toggleClass('active');
 }
 function showWords() {
   $('.right').addClass('active');
@@ -26,6 +26,6 @@ $(document).on('click', '.hamburger', function() {
   $(this).toggleClass('is-active');
   $('.sidebar').toggleClass('active');
   if ($(window).width() < 600) {
-    $('html,body').css('overflow', 'scroll');
+    $('html,body').toggleClass('overflow');
   }
 })
