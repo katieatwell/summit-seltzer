@@ -11,8 +11,8 @@ $(document).ready(function() {
   $('.bubbles-large').toggleClass('active');
   $('.bubbles-small').toggleClass('active');
   $('.bottom').addClass('active');
-  setTimeout(showWords, 1400);
-  setTimeout(fadeIn, 1200)
+  setTimeout(showWords, 1600);
+  setTimeout(fadeIn, 1400)
 })
 function fadeIn() {
   $('.wrapper').addClass('active');
