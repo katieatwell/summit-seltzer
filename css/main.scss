@@ -17,6 +17,8 @@ body {
   -webkit-font-smoothing: antialiased;
   &.overflow {
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+
   }
 }
 
@@ -110,9 +112,7 @@ p {
   justify-content: center;
   flex-wrap: no-wrap;
   flex-direction: column;
-  overflow: scroll;
   margin-bottom: 4vh;
-  -webkit-overflow-scrolling: touch;
   @media(max-width: 768px) {
     justify-content: flex-start;
   }
