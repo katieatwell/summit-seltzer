@@ -235,11 +235,12 @@ p {
   right: 2vw;
   transform: translate(-6vw, -6vh);
   bottom: 0;
-  -webkit-text-fill-color: #222;
+  -webkit-text-fill-color: transpartent;
   transition-delay: 3s;
   transition: all .3s ease;
+  background: inherit;
   h3 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin: 0;
     color: #222;
     font-weight: 100;
