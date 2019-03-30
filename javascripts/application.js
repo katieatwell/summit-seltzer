@@ -8,12 +8,17 @@ function getLetters(phrase) {
   })
 }
 $(document).ready(function() {
-  var heroSlogan = "synth XOXO poutine bicycle rights godard hashtag glossier";
-  getLetters(heroSlogan);
-})
-$(document).on('click', 'button', function() {
-  $('.modal').toggleClass('active');
-  $('.bubbles').toggleClass('active');
   $('.bubbles-large').toggleClass('active');
   $('.bubbles-small').toggleClass('active');
+  $('.bottom').addClass('active');
+  setTimeout(showWords, 1000);
+})
+function showWords() {
+  $('.right').addClass('active');
+  $('.menu').addClass('active');
+  $(".social-media a").addClass('active');
+  $('.wrapper').addClass('active');
+}
+$(document).on('click', '.menu', function() {
+  $('.sidebar').toggleClass('active');
 })
