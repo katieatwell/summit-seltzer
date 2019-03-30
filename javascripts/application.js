@@ -9,8 +9,8 @@ function getLetters(phrase) {
 }
 $(document).ready(function() {
   $('.bottom').addClass('active');
-  setTimeout(showWords, 2000);
-  setTimeout(fadeIn, 1800);
+  setTimeout(showWords, 300);
+  setTimeout(fadeIn, 200);
 })
 function fadeIn() {
   $('.hero-font').addClass('active');
