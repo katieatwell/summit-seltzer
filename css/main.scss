@@ -17,10 +17,11 @@ body {
   -webkit-font-smoothing: antialiased;
   &.overflow {
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  @media(max-width: 600px) {
     position: fixed;
     top: 0;
-    -webkit-overflow-scrolling: touch;
-
   }
 }
 
