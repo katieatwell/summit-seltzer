@@ -1,19 +1,4 @@
-
-
-function getLetters(phrase) {
-  phrase.split(" ").forEach(function(word) {
-    word.split('').forEach(function(letter) {
-      console.log(letter)
-    })
-  })
-}
-$(document).ready(function() {
-  $('.bottom').addClass('active');
-  setTimeout(showWords, 300);
-  setTimeout(fadeIn, 200);
-})
 function fadeIn() {
-  $('.hero-font').addClass('active');
   $('.bubbles-large').toggleClass('active');
   $('.bubbles-small').toggleClass('active');
 }
@@ -22,6 +7,16 @@ function showWords() {
   $('.menu').addClass('active');
   $(".social-media a").addClass('active');
 }
+$(document).ready(function() {
+  $('.bottom').addClass('active');
+  setTimeout(function() {
+    showWords();
+  }, 1000);
+  setTimeout(function() {
+    fadeIn();
+  }, 1000);
+})
+
 $(document).on('click', '.hamburger', function() {
   $(this).toggleClass('is-active');
   $('.sidebar').toggleClass('active');
